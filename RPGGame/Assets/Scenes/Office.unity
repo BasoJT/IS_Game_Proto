@@ -593,10 +593,6 @@ PrefabInstance:
       propertyPath: InteractIcon
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4377276534457109162, guid: 9f1edd136451175498882499ebd1e578, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 9000896583018776787, guid: 9f1edd136451175498882499ebd1e578, type: 3}
       propertyPath: m_Name
       value: Player (1)
@@ -924,7 +920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7813928408698605433, guid: 1f5e83694399db64a8a829c2529f087c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.297218
+      value: 5.3888597
       objectReference: {fileID: 0}
     - target: {fileID: 7813928408698605433, guid: 1f5e83694399db64a8a829c2529f087c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -932,7 +928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7813928408698605433, guid: 1f5e83694399db64a8a829c2529f087c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6242
+      value: 3.5784
       objectReference: {fileID: 0}
     - target: {fileID: 7813928408698605433, guid: 1f5e83694399db64a8a829c2529f087c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1378,6 +1374,18 @@ PrefabInstance:
     - target: {fileID: 2966335053400728266, guid: fc7cdee8d9e40cc488306fba1f3f953e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254272154491052710, guid: fc7cdee8d9e40cc488306fba1f3f953e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.24154502
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254272154491052710, guid: fc7cdee8d9e40cc488306fba1f3f953e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3331544
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254272154491052710, guid: fc7cdee8d9e40cc488306fba1f3f953e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4339623
       objectReference: {fileID: 0}
     - target: {fileID: 8983505984894074563, guid: fc7cdee8d9e40cc488306fba1f3f953e, type: 3}
       propertyPath: m_Icon
