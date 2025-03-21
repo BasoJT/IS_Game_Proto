@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7967111286909621962}
   - component: {fileID: 7986937501983361449}
   - component: {fileID: 5062115576240870632}
+  - component: {fileID: 5294234987155870509}
   m_Layer: 0
   m_Name: Clue_0
   m_TagString: Untagged
@@ -141,13 +142,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4290212145069995742}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc8e32bf1b33f0642ad68a65f3ffc0d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Open: {fileID: 0}
   Close: {fileID: 1652059052755051199, guid: b42c11dbe2cded44990fa75961abbdde, type: 3}
+--- !u!114 &5294234987155870509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4290212145069995742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d046af490464f438622b93d0805c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clue: {fileID: 7024352359236013582}
 --- !u!1 &7024352359236013582
 GameObject:
   m_ObjectHideFlags: 0

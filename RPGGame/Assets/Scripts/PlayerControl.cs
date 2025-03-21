@@ -5,18 +5,19 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     private GameObject InteractIcon;//used for clue interaction
-    // Start is called before the first frame update
+    
     public float movespd;
     public float jump;
     private float spdX;//movex
     public Rigidbody2D pl;
     private GameObject ActiveUI;
     public bool IsJumping;
+    
 
     private Vector2 boxsize = new Vector2(0.1f, 1f);
     void Start()
     {
-        //pl = GetComponent<Rigidbody2D>();//gravity
+        
     }
 
     // Update is called once per frame
@@ -34,9 +35,7 @@ public class PlayerControl : MonoBehaviour
                 ActiveUI.SetActive(false);
             }
         }
-        //spdX = Input.GetAxisRaw("Horizontal") * movespd;
-        //spdY = Input.GetAxisRaw("Vertical") * movespd;
-        //  pl.velocity = new Vector2(spdX, spdY);
+        
 
         spdX = Input.GetAxis("Horizontal");
         pl.velocity = new Vector2(movespd * spdX, pl.velocity.y);
@@ -50,15 +49,15 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    public void OpenInteractableIcon()
-    {
-        InteractIcon.SetActive(true);
-    }
+   // public void OpenInteractableIcon()
+   // {
+    //    InteractIcon.SetActive(true);
+   // }
 
-    public void CloseInteractableIcon()
-    {
-        InteractIcon.SetActive(false);
-    }
+    //public void CloseInteractableIcon()
+    //{
+       // InteractIcon.SetActive(false);
+    //}
 
     private void CheckInteraction()
     {
@@ -72,13 +71,15 @@ public class PlayerControl : MonoBehaviour
                 if (rc.IsInteractable()) //did extension
                 {
                     GameObject returnedUI;
+                    
                     returnedUI = rc.interacty();
+                    
                     if(returnedUI != null)//check to see if there is active UI
                     {
                         ActiveUI = returnedUI;
                     }
                     return;//storing taken actve UI 
-
+                    
 
                 }
 
