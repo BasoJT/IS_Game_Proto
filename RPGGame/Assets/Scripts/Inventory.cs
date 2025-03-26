@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Inventory : Interactables
 {
-   [SerializeField] public GameObject Clue;
- 
-    
+    [SerializeReference]public GameObject Clue;
+    public TMP_Text InventoryDisplay;
+    Dictionary<GameObject, int> PlayerInventory = new Dictionary<GameObject, int>();
+
     void Start()
     {
-        
+       // PlayerInventory.Add(Clue, 0);//Clue Counter added to dictionary
+        DisplayInventory();//display Inventory
+        Interact();
+
     }
 
     // Update is called once per frame
@@ -18,16 +23,39 @@ public class Inventory : Interactables
         
     }
 
+
+    public void DisplayInventory()
+    {
+        InventoryDisplay.text = "";
+        foreach (var item in PlayerInventory)
+        {
+            InventoryDisplay.text += "Item: " + item.Key + " Quantity: " + item.Value + "\n";
+        }
+    }
+
+    public void addclue()
+    {
+        if (PlayerInventory.ContainsKey(Clue))
+        {
+            PlayerInventory[Clue]++;
+
+        }
+        else
+        {
+            PlayerInventory.Add(Clue, 0);
+        }
+        DisplayInventory();
+    }
     public override GameObject Interact()
-    { //problem: how to tell if clue has been added to inventory
-        Dictionary<int, GameObject> cluecount = new Dictionary<int, GameObject>();
+    { 
+        
+        
         if (Clue == isActiveAndEnabled)
         {
-            cluecount.Add(1, Clue);//yoinked into dictionary
+            addclue();
 
 
-
-            Destroy(Clue);//destroys sprite and collision
+            
             
         }
         return null;
