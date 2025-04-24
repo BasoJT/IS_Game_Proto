@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Speed : MonoBehaviour
+public class ESpeed : MonoBehaviour
 {
-    [SerializeField] private float speedValue; // Speed value for the player
-    [SerializeField] private float rollSpeed;  // Roll speed for the player
-    [SerializeField] private float roundSpeed; // Round speed for the player (calculated)
+    [SerializeField] private float speedValue; // Speed value for the enemy
+    [SerializeField] private float rollSpeed;  // Roll speed for the enemy
+    [SerializeField] private float roundSpeed; // Round speed for the enemy (calculated)
 
     public float SpeedValue
     {
