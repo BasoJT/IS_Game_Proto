@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d10b1fbe06ea51429f2503af39d83c2, type: 3}
+  m_Name: Reina
+  m_EditorClassIdentifier: 
+  characterName: Reina
+  element: Fire
+  health: 22
+  speed: 7
+  skills:
+  - {fileID: 11400000, guid: c24c918a9422d0441b065cfb4e6bc31c, type: 2}
+  - {fileID: 11400000, guid: 813aa97f50880964a9570f098e36a699, type: 2}
+  - {fileID: 11400000, guid: aae7d5ef9f0bf884daf25100eaa0330e, type: 2}
+  - {fileID: 11400000, guid: 66f9d800f9edeb04484be438ce4ef2bf, type: 2}
+  - {fileID: 11400000, guid: 74de155b3cf43dd448fcfe94c998cc9c, type: 2}
+  characterPrefab: {fileID: 6468953020912883982, guid: 107fd34959c30bc42b2d387e43a5cb59, type: 3}

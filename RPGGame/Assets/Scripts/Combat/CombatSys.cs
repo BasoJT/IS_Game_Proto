@@ -15,7 +15,7 @@ public class CombatSys : MonoBehaviour
     {
         RandomizeRollSpeed(); // Randomize rollSpeed at the start
         PopulateAndSort();
-        CacheOriginalColors();
+        CacheOriginalColors(); // Cache original colors of all characters
         StartRound();
     }
 
@@ -25,6 +25,12 @@ public class CombatSys : MonoBehaviour
         {
             HandleTurn();
         }
+    }
+
+    public void SetCharacters(List<GameObject> characters)
+    {
+        sortOrder = characters.ToArray();
+        Debug.Log("CombatSys received characters.");
     }
 
     private void RandomizeRollSpeed()
@@ -85,6 +91,18 @@ public class CombatSys : MonoBehaviour
 
     private float GetRoundSpeedValue(GameObject character)
     {
+        // Skip checking CharacterData for GameObjects tagged as "Enemy"
+        if (character.CompareTag("Enemy"))
+        {
+            ESpeed enemySpeed = character.GetComponent<ESpeed>();
+            if (enemySpeed != null)
+            {
+                return enemySpeed.RoundSpeed; // Use ESpeed for enemies
+            }
+            Debug.Log($"Enemy {character.name} has no valid speed source.");
+            return 0f; // Default speed for enemies without ESpeed
+        }
+
         // Check for Speed component (Player)
         Speed playerSpeed = character.GetComponent<Speed>();
         if (playerSpeed != null)
@@ -92,13 +110,15 @@ public class CombatSys : MonoBehaviour
             return playerSpeed.RoundSpeed;
         }
 
-        // Check for ESpeed component (Enemy)
-        ESpeed enemySpeed = character.GetComponent<ESpeed>();
-        if (enemySpeed != null)
+        // Check for CharacterProfile component (CharacterData)
+        CharacterProfile profile = character.GetComponent<CharacterProfile>();
+        if (profile != null && profile.characterData != null)
         {
-            return enemySpeed.RoundSpeed;
+            Debug.Log($"Character: {profile.characterData.characterName}, Speed: {profile.characterData.speed}");
+            return profile.characterData.speed; // Read speed from CharacterData
         }
 
+        Debug.Log($"Character {character.name} has no valid speed source.");
         return 0f; // Default roundSpeed if no component is found
     }
 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d10b1fbe06ea51429f2503af39d83c2, type: 3}
+  m_Name: Laz
+  m_EditorClassIdentifier: 
+  characterName: Lazhar
+  element: Dark
+  health: 100
+  speed: 1000
+  skills:
+  - {fileID: 11400000, guid: 6c235dcea37bb0949bef5820518f0021, type: 2}
+  - {fileID: 11400000, guid: 69846f3458948f14cb6c83d8d343eb84, type: 2}
+  - {fileID: 11400000, guid: dfb93c0481d680349ba485f1b3fed89a, type: 2}
+  - {fileID: 11400000, guid: 247f55365403a804f820900ea98e084d, type: 2}
+  - {fileID: 11400000, guid: 2d189779ef4c3734690dc411d7f3b8ff, type: 2}
+  characterPrefab: {fileID: 8093058285891271735, guid: 3069f72873746c64a894d2db6340d271, type: 3}
